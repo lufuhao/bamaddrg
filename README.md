@@ -56,6 +56,10 @@ variant detector).
 
     cd x86_64
     
+    make
+    
+> If make report error, replace following $BamtoolsInstallDir. and try again
+
     g++ -O3 -I$BamtoolsInstallDir/x86_64/include/bamtools -L$BamtoolsInstallDir/x86_64/lib  bamaddrg.cpp -o bamaddrg -lbamtools -lz
 
 ---
