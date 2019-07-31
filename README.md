@@ -42,6 +42,8 @@ variant detector).
     
     cmake -DCMAKE_INSTALL_PREFIX=$PWD/../../x86_64 ..
     
+    export BAMTOOLS_ROOT=$PWD/../../x86_64
+    
     make
     
     make install
