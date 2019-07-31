@@ -1,4 +1,6 @@
-bamaddrg: adds read groups to input BAM files, streams BAM output on stdout.
+# bamaddrg
+
+Adds read groups to input BAM files, streams BAM output on stdout.
 
 This is intended for use "fixing up" RG tags on the fly so that they reflect
 the source file from which the aligment originated from.  This allows the
@@ -6,7 +8,7 @@ the source file from which the aligment originated from.  This allows the
 for input into downstream processing systems such as freebayes (a population
 variant detector).
 
-Usage:
+# Usage:
 
 To tag multiple files simultaneously, use as such:
 
@@ -23,9 +25,9 @@ group id "bill", and samples from file4.bam would be tagged with sample name
 "file4.bam" and read group id "file4.bam."
 
 
-Update:
+# Install
 
-Install BAMtools
+## Install BAMtools
 
     cd $BamtoolsInstallDir
 
@@ -43,7 +45,7 @@ Install BAMtools
     
     make install
     
-Install bamaddrg
+## Install bamaddrg
     
     cd $BamaddrgInstallDir
     
