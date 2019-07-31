@@ -9,9 +9,24 @@ for input into downstream processing systems such as freebayes (a population
 variant detector).
 
 ---
-# Install
 
-bamaddrg requires BAMtools lib/libbamtools.a and include/bamtools/api/BamMultiReader.h
+# Requirements
+
+    g++
+    
+    BAMtools
+    
+    > lib/libbamtools.a
+
+    > include/bamtools/api/BamMultiReader.h
+
+    > include/bamtools/api/BamWriter.h
+
+    > include/bamtools/api/SamReadGroup.h
+
+---
+
+# Install
 
 ## Install [BAMtools](https://github.com/pezmaster31/bamtools)
 
