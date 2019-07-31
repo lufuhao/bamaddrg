@@ -8,26 +8,12 @@ the source file from which the aligment originated from.  This allows the
 for input into downstream processing systems such as freebayes (a population
 variant detector).
 
-# Usage:
-
-To tag multiple files simultaneously, use as such:
-
-    % bamaddrg -b file1.bam -s jill -r group.s1.1 \
-               -b file2.bam -s jill -r group.s1.2 \
-               -b file3.bam -s bill \
-               -b file4.bam \
-       | freebayes ...
-
-This would add the sample name "jill" to records from file1.bam and file2.bam,
-while specifying that specific read group identify alignments from each file.
-Alignments from file3.bam would be tagged with sample name "bill" and read
-group id "bill", and samples from file4.bam would be tagged with sample name
-"file4.bam" and read group id "file4.bam."
-
-
+---
 # Install
 
-## Install BAMtools
+bamaddrg requires BAMtools lib/libbamtools.a and include/bamtools/api/BamMultiReader.h
+
+## Install [BAMtools](https://github.com/pezmaster31/bamtools)
 
     cd $BamtoolsInstallDir
 
@@ -56,5 +42,21 @@ group id "bill", and samples from file4.bam would be tagged with sample name
     cd x86_64
     
     g++ -O3 -I$BamtoolsInstallDir/x86_64/include/bamtools -L$BamtoolsInstallDir/x86_64/lib  bamaddrg.cpp -o bamaddrg -lbamtools -lz
-    
-    
+
+---
+
+# Usage:
+
+To tag multiple files simultaneously, use as such:
+
+    % bamaddrg -b file1.bam -s jill -r group.s1.1 \
+               -b file2.bam -s jill -r group.s1.2 \
+               -b file3.bam -s bill \
+               -b file4.bam \
+       | freebayes ...
+
+This would add the sample name "jill" to records from file1.bam and file2.bam,
+while specifying that specific read group identify alignments from each file.
+Alignments from file3.bam would be tagged with sample name "bill" and read
+group id "bill", and samples from file4.bam would be tagged with sample name
+"file4.bam" and read group id "file4.bam."
