@@ -13,7 +13,7 @@ using namespace std;
 
 void printUsage(int argc, char** argv) {
 
-    cerr << "usage: " << argv[0] << " [-b FILE [-s NAME [-r GROUP]]]" << endl
+    cerr << "Usage: " << argv[0] << " [-b FILE [-s NAME [-r GROUP]]]" << endl
          << endl
          << "options:" << endl
          << "    -h, --help         this dialog" << endl
