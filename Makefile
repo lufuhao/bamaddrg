@@ -1,5 +1,5 @@
 CXX=g++
-BAMTOOLS_ROOT=$BAMTOOLS
+BAMTOOLS_ROOT=bamtools
 CXXFLAGS=-O3 -I$(BAMTOOLS_ROOT)/include/bamtools -L$(BAMTOOLS_ROOT)/lib
 
 all: bamaddrg
