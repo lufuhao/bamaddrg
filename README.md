@@ -60,9 +60,13 @@ variant detector).
     
     make
     
+    #or
+    
+    make =/path/to/bamtools/root
+    
 > If make report error, replace following $BamtoolsInstallDir. and try again
 
-    g++ -O3 -I$BamtoolsInstallDir/x86_64/include/bamtools -L$BamtoolsInstallDir/x86_64/lib  bamaddrg.cpp -o bamaddrg -lbamtools -lz
+    g++ -O3 -I$BAMTOOLS_ROOT/include/bamtools -L$BAMTOOLS_ROOT/lib  bamaddrg.cpp -o bamaddrg -lbamtools -lz
 
 ---
 
