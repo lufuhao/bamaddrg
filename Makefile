@@ -10,7 +10,7 @@ all: bamaddrg
 #	cp bamtools/lib/libbamtools.a ./
 
 # statically compiles bamaddrg against bamtools static lib
-bamaddrg: bamaddrg.cpp libbamtools.a
+bamaddrg: bamaddrg.cpp
 	$(CXX) $(CXXFLAGS) bamaddrg.cpp -o bamaddrg -lbamtools -lz
 
 clean:
